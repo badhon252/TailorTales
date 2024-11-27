@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
-  const [snippets, setSnippets] = useState<string[]>([
+  const snippets = [
     "Engaging Stories",
     "Brand Voice",
     "AI-Powered",
@@ -13,14 +13,16 @@ export default function HeroSection() {
     "Multi-Channel",
     "Creativity",
     "Storytelling",
-  ]);
+  ];
 
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        background: "radial-gradient(circle, rgba(255,0,74,1) 0%, rgba(0,0,119,1) 100%)",
-        filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff004a',endColorstr='#0001ff',GradientType=1)", // For older IE
+        background:
+          "radial-gradient(circle, rgba(255,0,74,1) 0%, rgba(0,0,119,1) 100%)",
+        filter:
+          "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff004a',endColorstr='#0001ff',GradientType=1)", // For older IE
       }}
     >
       <div className="container mx-auto z-10 px-4 relative">
@@ -41,7 +43,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Personalized content tailored to your audience—blogs, social media, and beyond.
+            Personalized content tailored to your audience—blogs, social media,
+            and beyond.
           </motion.p>
           {/* Call-to-Action Button */}
           <motion.div
@@ -93,8 +96,8 @@ function FloatingTextBackground({ snippets }: { snippets: string[] }) {
           key={index}
           className="absolute text-white text-opacity-50 text-3xl md:text-5xl font-bold pointer-events-none"
           initial={{
-            x: Math.random() * dimensions.width/2,
-            y: Math.random() * dimensions.height/2,
+            x: (Math.random() * dimensions.width) / 2,
+            y: (Math.random() * dimensions.height) / 2,
             opacity: 0,
           }}
           animate={{
