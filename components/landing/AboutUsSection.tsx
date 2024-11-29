@@ -14,7 +14,7 @@ export default function AboutUsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          About <span className="text-yellow-400">TailorTales</span>
+          About <span className="">TailorTales</span>
         </h2>
         <p
           className="text-2xl max-w-2xl mx-auto text-gray-300 rounded-lg  p-6"
