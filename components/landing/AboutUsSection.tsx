@@ -8,20 +8,10 @@ export default function AboutUsSection() {
       }}
     >
       <div className="container mx-auto text-center px-4">
-        <h2
-          className="font-heading text-4xl md:text-6xl font-bold my-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <h2 className="font-heading text-4xl md:text-6xl font-bold my-12 text-white">
           About <span className="">TailorTales</span>
         </h2>
-        <p
-          className="text-2xl max-w-2xl mx-auto text-gray-300 rounded-lg  p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <p className="text-2xl max-w-2xl mx-auto text-gray-300 rounded-lg  p-6">
           Helping small businesses tell big stories with the power of AI.
           We&quot;re on a mission to revolutionize content creation and empower
           brands to connect with their audience like never before.

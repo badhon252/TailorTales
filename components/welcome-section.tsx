@@ -8,7 +8,11 @@ import {
 } from "@/components/ui/card";
 import { Sparkles, Zap } from "lucide-react";
 
-export function WelcomeSection({ setActiveSection }) {
+export function WelcomeSection({
+  setActiveSection,
+}: {
+  setActiveSection: (section: string) => void;
+}) {
   return (
     <Card className="overflow-hidden bg-gradient-to-r from-purple-500 to-indigo-600 text-white">
       <CardHeader className="pb-0">
