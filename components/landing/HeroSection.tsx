@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
@@ -57,7 +58,7 @@ export default function HeroSection() {
               size="lg"
               className="bg-[#ffd900c7] hover:bg-[#ffd000] text-[#4B0082] font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Generate Your First Story Now
+              <Link href="/dashboard">Generate Your First Story Now</Link>
             </Button>
           </motion.div>
         </div>
