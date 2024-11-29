@@ -9,7 +9,13 @@ import {
 import { motion } from "framer-motion";
 import { menuItems } from "@/public/data/menuItems";
 
-export function NavigationMenu({ activeSection, setActiveSection }) {
+export function NavigationMenu({
+  activeSection,
+  setActiveSection,
+}: {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}) {
   return (
     <TooltipProvider>
       <nav className="flex justify-between items-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md relative overflow-hidden">

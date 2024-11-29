@@ -46,7 +46,17 @@ export default function HowItWorksSection() {
   );
 }
 
-function StepCard({ icon: Icon, title, description, index }) {
+function StepCard({
+  icon: Icon,
+  title,
+  description,
+  index,
+}: {
+  icon: React.ComponentType;
+  title: string;
+  description: string;
+  index: number;
+}) {
   return (
     <motion.div
       className={`flex items-center mb-12 ${
@@ -63,7 +73,7 @@ function StepCard({ icon: Icon, title, description, index }) {
       >
         <div className="flex items-center mb-4">
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-full mr-4">
-            <Icon className="w-6 h-6 text-white" />
+            <Icon />
           </div>
           <h3 className="font-heading text-2xl font-semibold text-gray-50">
             {title}

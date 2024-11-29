@@ -22,9 +22,9 @@ export default function AboutUsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Helping small businesses tell big stories with the power of AI. We're
-          on a mission to revolutionize content creation and empower brands to
-          connect with their audience like never before.
+          Helping small businesses tell big stories with the power of AI.
+          We&quot;re on a mission to revolutionize content creation and empower
+          brands to connect with their audience like never before.
         </p>
       </div>
     </section>

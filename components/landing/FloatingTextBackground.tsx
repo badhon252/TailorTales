@@ -1,8 +1,12 @@
-'use client';
+"use client";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function FloatingTextBackground({ snippets }: { snippets: string[] }) {
+export default function FloatingTextBackground({
+  snippets,
+}: {
+  snippets: string[];
+}) {
   const controls = useAnimation();
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
@@ -12,6 +16,7 @@ export default function FloatingTextBackground({ snippets }: { snippets: string[
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       snippets.forEach((snippet, index) => {
         controls.start({
           x: Math.random() * dimensions.width,
@@ -24,8 +29,8 @@ export default function FloatingTextBackground({ snippets }: { snippets: string[
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [snippets, controls]); // Add snippets to trigger re-animation when snippets changes
-
 
   return (
     <div className="absolute inset-0 overflow-hidden">

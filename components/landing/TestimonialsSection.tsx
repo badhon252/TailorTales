@@ -118,7 +118,7 @@ export default function ExpandingGrid() {
                       : "text-base line-clamp-2"
                   }`}
                 >
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
               </motion.div>
             </motion.div>

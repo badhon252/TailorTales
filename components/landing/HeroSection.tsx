@@ -35,7 +35,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Craft Your Brand's Story with AI-Powered Creativity
+            Craft Your Brand&quot;s Story with AI-Powered Creativity
           </motion.h1>
           {/* Subheading */}
           <motion.p

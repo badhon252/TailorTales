@@ -1,6 +1,16 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+interface TextOnlyItem {
+  text: string;
+}
+
+interface SubtitleItem {
+  text: string;
+  subtitle: string;
+}
+
+type ContentItem = TextOnlyItem | SubtitleItem;
 
 export default function TermsAndConditions() {
   const effectiveDate = "November 29, 2024";
@@ -190,11 +200,12 @@ export default function TermsAndConditions() {
       </Card>
 
       <p className="text-lg mb-8">
-        Welcome to TailorTales ("we," "our," "us"), a platform that helps
-        businesses create personalized, AI-powered content. By accessing or
-        using our website and services (the "Service"), you agree to comply with
-        and be bound by the following terms and conditions ("Terms"). If you do
-        not agree to these Terms, please do not use the Service.
+        Welcome to TailorTales (&quot;we,&quot; &quot;our,&quot;
+        &quot;us&quot;), a platform that helps businesses create personalized,
+        AI-powered content. By accessing or using our website and services (the
+        &quot;Service&quot;), you agree to comply with and be bound by the
+        following terms and conditions (&quot;Terms&quot;). If you do not agree
+        to these Terms, please do not use the Service.
       </p>
 
       <ScrollArea className="h-[600px] rounded-md border p-4">
@@ -204,16 +215,24 @@ export default function TermsAndConditions() {
               <CardTitle>{section.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              {section.content.map((item, index) => (
-                <div key={index} className="mb-4">
-                  {item.subtitle && (
-                    <h3 className="text-lg font-semibold mb-2">
-                      {item.subtitle}
-                    </h3>
-                  )}
-                  <p className="whitespace-pre-line">{item.text}</p>
-                </div>
-              ))}
+              {section.content.map((item: ContentItem, index) => {
+                if ("subtitle" in item) {
+                  return (
+                    <div key={index} className="mb-4">
+                      <h3 className="text-lg font-semibold mb-2">
+                        {item.subtitle}
+                      </h3>
+                      <p className="whitespace-pre-line">{item.text}</p>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div key={index} className="mb-4">
+                      <p className="whitespace-pre-line">{item.text}</p>
+                    </div>
+                  );
+                }
+              })}
             </CardContent>
           </Card>
         ))}

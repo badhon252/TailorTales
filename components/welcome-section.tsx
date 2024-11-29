@@ -16,7 +16,7 @@ export function WelcomeSection({ setActiveSection }) {
           Welcome back, User!
         </CardTitle>
         <CardDescription className="text-lg text-purple-100">
-          Let's craft something amazing today!
+          Let&quot;s craft something amazing today!
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-6">

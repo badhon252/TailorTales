@@ -147,8 +147,9 @@ export default function PrivacyPolicy() {
       <p className="text-lg mb-8">
         At TailorTales, we value and respect your privacy. This Privacy Policy
         outlines how we collect, use, store, and protect your personal
-        information when you use our website and services (the "Service"). By
-        using our Service, you agree to the terms outlined in this policy.
+        information when you use our website and services (the
+        &quot;Service&quot;). By using our Service, you agree to the terms
+        outlined in this policy.
       </p>
 
       <ScrollArea className="h-[600px] rounded-md border p-4">
